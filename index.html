@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Round off calculator</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+    background-image: linear-gradient(lightskyblue, deepskyblue, skyblue);
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    h1:hover{
+        color:lightgoldenrodyellow;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    button:focus{
+        background-color:lightskyblue;
+        border-radius:10px ;
+        border:1px solid navy;
+    }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>Round OFF Calculator</h1>
+        <h2>INPUT THE NUMBER</h2>
+        <label>Enter a value:</label>
+        <input type="number" placeholder="Enter a value" id="num">
+        <button onclick="rounding()">Round Off</button>
+        <h3 id="result"></h3>
+        </center>
+        <script>
+            function rounding(){
+                let inputNum = document.getElementById("num").value;
+
+                if(inputNum === ""){
+                    alert("Please Enter A Value");
+                    return;
+                }
+
+                let roundedNum = Math.round(Number(inputNum));
+
+                document.getElementById("result").innerHTML = "Rounded Value: " + roundedNum;
+            }
+        </script>
+    </body>
+    </html>
